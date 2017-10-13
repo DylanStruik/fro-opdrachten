@@ -13,11 +13,15 @@
         text-align: center;
         margin: 20px;
     }
+
+    body {
+        background-color: dodgerblue;
+    }
 </style>
 <body>
     <h1 id="titel">Slaapmeter</h1>
-    <button id="startknop" onclick="startknopIndrukken()">Starten!</button>
-    <button id="stopknop" style="display: none;" onclick="stopknopIndrukken()">Stoppen!</button>
+    <button id="startknop">Starten!</button>
+    <button id="stopknop">Stoppen!</button>
     <p id="resultaat"></p>
 </body>
 <script>
@@ -28,21 +32,21 @@
     let stopTijd;
     let verschil;
 
+    startknop.addEventListener("click", startknopIndrukken);
+    stopknop.addEventListener("click", stopknopIndrukken);
+
     function startknopIndrukken() {
-        startknop.style.display="none";
-        stopknop.style.display="block";
         startTijd = (Date.now()/1000);
     }
 
     function stopknopIndrukken() {
-        stopknop.style.display="none";
-        startknop.style.display="block";
         stopTijd = (Date.now()/1000);
-        verschil = Math.round(stopTijd - startTijd);
-        resultaatRegel.innerHTML=(verschil);
+        eindBerekening();
     }
 
-
-
+    function eindBerekening() {
+        verschil = Math.floor((stopTijd - startTijd));
+        resultaatRegel.innerHTML=(verschil);
+    }
 </script>
 </html>
