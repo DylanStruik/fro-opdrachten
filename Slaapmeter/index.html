@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slaapmeter</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        text-align: center;
+        margin: 20px;
+    }
+</style>
+<body>
+    <h1 id="titel">Slaapmeter</h1>
+    <button id="startknop" onclick="startknopIndrukken()">Starten!</button>
+    <button id="stopknop" style="display: none;" onclick="stopknopIndrukken()">Stoppen!</button>
+    <p id="resultaat"></p>
+</body>
+<script>
+    const startknop = document.getElementById("startknop");
+    const stopknop = document.getElementById("stopknop");
+    const resultaatRegel = document.getElementById("resultaat");
+    let startTijd;
+    let stopTijd;
+    let verschil;
+
+    function startknopIndrukken() {
+        startknop.style.display="none";
+        stopknop.style.display="block";
+        startTijd = (Date.now()/1000);
+    }
+
+    function stopknopIndrukken() {
+        stopknop.style.display="none";
+        startknop.style.display="block";
+        stopTijd = (Date.now()/1000);
+        verschil = Math.round(stopTijd - startTijd);
+        resultaatRegel.innerHTML=(verschil);
+    }
+
+
+
+</script>
+</html>
