@@ -1,0 +1,141 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1041px;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+  grid-template-rows: 1fr 0.1fr;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  &__topbar {
+    background-color: rgb(242, 242, 242);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 1px;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 12px;
+  }
+
+  &__topbar a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__banner img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+  }
+
+  &__navigatie {
+    height: 60px;
+    text-transform: uppercase;
+    margin-left: 0;
+
+    & ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    &__logo {
+      z-index: 3;
+      position: relative;
+      padding-top: -200px;
+    }
+
+    & li {
+      float: left;
+    }
+
+    & li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 0 10px;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 20px;
+    }
+
+    & button {
+      height: 0;
+      padding: 20px;
+    }
+  }
+}
+
+.header .button_content {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: lightgrey;
+  color: white;
+}
+
+.inhoud {
+  &__h2 {
+    border-bottom: 3px dashed orange;
+    padding: 4.5px;
+    font-size: 2em;
+    color: orange;
+  }
+
+  &__instructie--h2 {
+    font-size: 1em;
+  }
+  &__subfooter {
+    background-color: #F5F5F5;
+    padding: 50px 0;
+    border-top: 2px solid #EBEBEB;
+    border-bottom: 2px solid #EBEBEB;
+  }
+}
+
+.ingredienten {
+  margin-left: 5%;
+  width: 50%;
+
+  &__h2 {
+    border-bottom: 3px dashed orange;
+    padding: 10px;
+  }
+
+  &__p {
+    font-family: sans-serif;
+  }
+
+  &__button {
+    color: white;
+    background-color: orange;
+    border-radius: 5%;
+    height: 50px;
+    width: 150px;
+    font-size: 1em;
+    border: none;
+  }
+}
+
+.footer {
+  & img {
+    margin-left: 7.5%;
+    background-color: lightgrey;
+  }
+
+  &__banner {
+    width: 100%;
+  }
+}
