@@ -1,8 +1,12 @@
+body {
+  background-color: lightgrey;
+}
+
 .vlakje {
     margin-left: -50em;
     width: 50em;
     height: 5em;
-    transition: transform .6s ease-out;
+    transition: transform .6s cubic-bezier(.5,-0.59,.5,1.45);
 }
 
 .vlakje--expand {
