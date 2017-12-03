@@ -1,0 +1,10 @@
+.vlakje {
+    margin-left: -50em;
+    width: 50em;
+    height: 5em;
+    transition: transform .6s ease-out;
+}
+
+.vlakje--expand {
+    transform: translateX(30em);
+}
